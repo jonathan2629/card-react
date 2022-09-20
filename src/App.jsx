@@ -4,6 +4,7 @@ import QuotesBox from "./assets/components/QuotesBox";
 import quotes from "./json/quotes.json";
 import color from "./utils/colors";
 
+
 function App() {
 	const getIndexRandom = (arr) => Math.floor(Math.random() * arr.length);
 
@@ -22,7 +23,7 @@ function App() {
 		setRandomQuote(quotes[getIndexRandom(quotes)]);
 		setRandomColor(color[getIndexRandom(color)]);
 	};
-//aqui se ecuentra mis componentes y sus props
+	//aqui se ecuentra mis componentes y sus props
 	return (
 		<div style={bacgroudObject} className="App">
 			<QuotesBox
@@ -30,7 +31,6 @@ function App() {
 				randomColor={randomColor}
 				getRandomAll={getRandomAll}
 			/>
-			
 		</div>
 	);
 }
